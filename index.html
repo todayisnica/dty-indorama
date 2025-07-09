@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DTY Indorama - Draw Texturised Yarn Company Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Preload critical images -->
+    <link rel="preload" href="images/image.png" as="image" />
+    <link rel="preload" href="images/image2.jpg" as="image" />
+    <link rel="preload" href="images/image3.jpg" as="image" />
+    <link rel="preload" href="images/image4.jpg" as="image" />
+    <link rel="preload" href="images/image5.jpg" as="image" />
+    <link rel="preload" href="images/image6.jpg" as="image" />
+    <link rel="preload" href="images/image7.jpg" as="image" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>DTY Indorama</h2>
+        </div>
+        <div class="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#products" class="nav-link">Produk</a>
+          <a href="#process" class="nav-link">Proses</a>
+          <a href="#packaging" class="nav-link">Pengemasan</a>
+          <a href="#advantages" class="nav-link">Keunggulan</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link">Kontak</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Draw Texturised Yarn</h1>
+        <p class="hero-subtitle">
+          Benang Polyester Berkualitas Tinggi untuk Industri Tekstil Modern
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Pelajari Produk</a>
+          <a href="#contact" class="btn btn-secondary">Hubungi Kami</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="image-placeholder"></div>
+          <img
+            src="images/image.png"
+            alt="DTY Production"
+            class="hero-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            onload="this.previousElementSibling.style.display='none';"
+          />
+          <div class="image-error" style="display: none">
+            <i class="fas fa-image"></i>
+            <p>Gambar tidak dapat dimuat</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="container">
+        <h2 class="section-title">Produk Utama</h2>
+        <div class="product-detail">
+          <div class="product-image">
+            <div class="image-container">
+              <div class="image-placeholder"></div>
+              <img
+                src="images/image2.jpg"
+                alt="DTY Yarn Production"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                onload="this.previousElementSibling.style.display='none';"
+              />
+              <div class="image-error" style="display: none">
+                <i class="fas fa-image"></i>
+                <p>Gambar tidak dapat dimuat</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Draw Texturised Yarn (DTY)</h3>
+            <p class="product-description">
+              Draw Texturised Yarn (DTY) adalah benang multifilamen poliester
+              sepenuhnya (fully drawn, fully oriented) yang memiliki tekstur
+              lembut, daya tahan tinggi, serta elastisitas dan volume yang baik.
+              DTY diproduksi melalui proses texturizing dengan mesin
+              berteknologi tinggi sehingga sangat cocok untuk aplikasi pakaian
+              luar/dalam, kain yang menempel di tubuh, furnitur, upholstery,
+              hingga menggantikan benang kapas dan campuran kapas dengan
+              kelembaban sangat rendah.
+            </p>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">
+              <i class="fas fa-yarn"></i>
+            </div>
+            <h3>Draw Texturised Yarn (DTY)</h3>
+            <p>
+              Benang multifilamen poliester sepenuhnya dengan tekstur lembut,
+              daya tahan tinggi, serta elastisitas dan volume yang baik.
+            </p>
+            <div class="product-price">Rp 27.000 / kg</div>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3>Benang POY</h3>
+            <p>
+              Partially Oriented Yarn untuk proses lanjutan menjadi DTY dengan
+              kualitas konsisten.
+            </p>
+            <div class="product-price">Rp 18.000 / kg</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Keunggulan Produk</h2>
+        <div class="features-intro">
+          <div class="features-image">
+            <div class="image-container">
+              <div class="image-placeholder"></div>
+              <img
+                src="images/image4.jpg"
+                alt="DTY Quality Control"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                onload="this.previousElementSibling.style.display='none';"
+              />
+              <div class="image-error" style="display: none">
+                <i class="fas fa-image"></i>
+                <p>Gambar tidak dapat dimuat</p>
+              </div>
+            </div>
+          </div>
+          <div class="features-text">
+            <p>
+              Produk DTY kami dibuat dengan standar kualitas internasional
+              menggunakan teknologi terdepan dan proses kontrol kualitas yang
+              ketat untuk memastikan setiap benang memenuhi spesifikasi yang
+              diinginkan.
+            </p>
+          </div>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3>Kualitas Tinggi</h3>
+            <p>
+              Diproduksi dengan mesin canggih dan proses kontrol kualitas ketat,
+              memastikan bulk dan elongasi konsisten.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Teknologi Modern</h3>
+            <p>
+              Mesin texturising berkecepatan tinggi menghasilkan benang dengan
+              sifat yang seragam.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Ramah Lingkungan</h3>
+            <p>
+              Penggunaan minyak pelumas anti-statis berkualitas tinggi dengan
+              pilihan interlacement sesuai kebutuhan tanpa sizing tambahan.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+            <h3>Aplikasi Luas</h3>
+            <p>
+              Cocok untuk produk pakaian, celana, karpet, alat ibadah,
+              upholstery, dan lain-lain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+      <div class="container">
+        <h2 class="section-title">Proses Produksi DTY</h2>
+        <div class="process-intro">
+          <div class="process-images">
+            <div class="image-container">
+              <div class="image-placeholder"></div>
+              <img
+                src="images/image5.jpg"
+                alt="DTY Production Process"
+                class="process-main-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                onload="this.previousElementSibling.style.display='none';"
+              />
+              <div class="image-error" style="display: none">
+                <i class="fas fa-image"></i>
+                <p>Gambar tidak dapat dimuat</p>
+              </div>
+            </div>
+            <div class="process-gallery">
+              <div class="image-container">
+                <div class="image-placeholder"></div>
+                <img
+                  src="images/image6.jpg"
+                  alt="DTY Machine"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                  onload="this.previousElementSibling.style.display='none';"
+                />
+                <div class="image-error" style="display: none">
+                  <i class="fas fa-image"></i>
+                  <p>Gambar tidak dapat dimuat</p>
+                </div>
+              </div>
+              <div class="image-container">
+                <div class="image-placeholder"></div>
+                <img
+                  src="images/image7.jpg"
+                  alt="DTY Quality Check"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                  onload="this.previousElementSibling.style.display='none';"
+                />
+                <div class="image-error" style="display: none">
+                  <i class="fas fa-image"></i>
+                  <p>Gambar tidak dapat dimuat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="process-description">
+            <p>
+              Proses produksi DTY kami menggunakan teknologi terdepan dengan 7
+              tahapan utama yang terkontrol ketat untuk menghasilkan benang
+              berkualitas tinggi yang memenuhi standar internasional.
+            </p>
+          </div>
+        </div>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Loading</h3>
+              <p>Persiapan bahan baku berkualitas tinggi</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Splicing</h3>
+              <p>Penyambungan benang untuk hasil yang mulus dan konsisten</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Treading</h3>
+              <p>Proses penarikan dengan mesin berteknologi tinggi</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Dopping</h3>
+              <p>Pengambilan benang yang telah melalui proses treading</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Segregation</h3>
+              <p>Penyortiran produk sesuai kualitas dan spesifikasi</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h3>Knitting</h3>
+              <p>Pengolahan menjadi kain atau produk tekstil lain</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+              <h3>Packing</h3>
+              <p>Pengemasan produk agar tetap aman hingga ke pelanggan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="advantages">
+      <div class="container">
+        <h2 class="section-title">Keunggulan Perusahaan</h2>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-factory"></i>
+            </div>
+            <h3>Proses Produksi Modern</h3>
+            <p>Menggunakan mesin terbaru untuk memastikan kualitas produk</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Standar Operasional Ketat</h3>
+            <p>Kualitas dan konsistensi produk terjaga</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>SDM Profesional</h3>
+            <p>Dikerjakan tenaga ahli di bidangnya</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Jangkauan Pasar Luas</h3>
+            <p>Produk diterima di pasar domestik dan ekspor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+      <div class="container">
+        <h2 class="section-title" style="color: white;">Pelanggan Ternama</h2>
+        <div class="clients-grid">
+          <div class="client-logo">ADIDAS</div>
+          <div class="client-logo">H&M</div>
+          <div class="client-logo">UNIQLO</div>
+          <div class="client-logo">NIKE</div>
+          <div class="client-logo">ZARA</div>
+          <div class="client-logo">PUMA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Variants Section -->
+    <section class="variants">
+      <div class="container">
+        <h2 class="section-title">Varian Produk</h2>
+        <div class="variants-content">
+          <div class="variants-info">
+            <h3>Tersedia dalam berbagai denier dan jumlah filamen:</h3>
+            <div class="variants-grid">
+              <div class="variant-item">62/34</div>
+              <div class="variant-item">71/34</div>
+              <div class="variant-item">75/34</div>
+              <div class="variant-item">80/34</div>
+              <div class="variant-item">100/34</div>
+              <div class="variant-item">150/34</div>
+              <div class="variant-item">150/48</div>
+              <div class="variant-item">150/100</div>
+              <div class="variant-item">150/136</div>
+              <div class="variant-item">300/68</div>
+              <div class="variant-item">300/96</div>
+              <div class="variant-item">600/136</div>
+            </div>
+            <div class="variants-extra">
+              <p class="variants-note">
+                <strong
+                  >Intermingled (various rip levels) & non-intermingled juga
+                  tersedia.</strong
+                >
+              </p>
+              <p class="variants-note">
+                <strong
+                  >Pengemasan dapat disesuaikan untuk kebutuhan ekspor maupun
+                  domestik.</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packaging Section -->
+    <section id="packaging" class="packaging">
+      <div class="container">
+        <h2 class="section-title">Pengemasan & Pengiriman</h2>
+        <div class="packaging-content">
+          <div class="packaging-image">
+            <div class="image-container">
+              <div class="image-placeholder"></div>
+              <img
+                src="images/image3.jpg"
+                alt="DTY Packaging"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                onload="this.previousElementSibling.style.display='none';"
+              />
+              <div class="image-error" style="display: none">
+                <i class="fas fa-image"></i>
+                <p>Gambar tidak dapat dimuat</p>
+              </div>
+            </div>
+          </div>
+          <div class="packaging-info">
+            <div class="packaging-grid">
+              <div class="packaging-item">
+                <div class="packaging-icon">
+                  <i class="fas fa-box"></i>
+                </div>
+                <h3>Jenis Kemasan</h3>
+                <p>
+                  Karton laut yang kuat, dilapisi BOPP tape dan diikat tali
+                  polypropylene.
+                </p>
+              </div>
+              <div class="packaging-item">
+                <div class="packaging-icon">
+                  <i class="fas fa-ruler"></i>
+                </div>
+                <h3>Ukuran Karton</h3>
+                <p>Domestik: 900x450x340 mm<br />Ekspor: 900x450x295 mm</p>
+              </div>
+              <div class="packaging-item">
+                <div class="packaging-icon">
+                  <i class="fas fa-weight"></i>
+                </div>
+                <h3>Isi Kemasan</h3>
+                <p>
+                  8 cheese per karton<br />Domestik: 3 kg/cheese<br />Ekspor:
+                  4.5 kg/cheese
+                </p>
+              </div>
+              <div class="packaging-item">
+                <div class="packaging-icon">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <h3>Label Karton</h3>
+                <p>
+                  Memuat info perusahaan, jenis benang, denier, grade, berat
+                  kotor/netto, dsb.
+                </p>
+              </div>
+              <div class="packaging-item">
+                <div class="packaging-icon">
+                  <i class="fas fa-truck"></i>
+                </div>
+                <h3>Pengiriman</h3>
+                <p>
+                  Produk dipallet dan disimpan dengan sistem high rise stack
+                  sebelum pengiriman.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Testimoni Pelanggan</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Kualitas dan ketahanan benang yang sangat baik. Produk DTY
+                Indonesia selalu memenuhi standar internasional yang kami
+                butuhkan."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <strong>Adidas Manufacturing</strong>
+              <span>Global Sportswear Brand</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Pengiriman dan layanan pelanggan yang responsif. Tim DTY
+                Indonesia selalu siap membantu kebutuhan produksi kami."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <strong>H&M Textiles</strong>
+              <span>Fashion Retail Chain</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Produk mudah diproses sesuai kebutuhan industri modern.
+                Konsistensi kualitas yang luar biasa untuk semua batch."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <strong>Uniqlo Manufacturing</strong>
+              <span>Clothing Manufacturer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Apa perbedaan POY dan DTY?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                POY adalah benang mentah (Partially Oriented Yarn), sedangkan
+                DTY adalah hasil proses lanjutan POY yang menghasilkan tekstur
+                elastis dan lebih lembut.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Apakah bisa membeli dalam jumlah besar?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya, pengiriman dalam jumlah besar tersedia untuk kebutuhan
+                industri.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Bagaimana proses pengiriman produk?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Produk dikirim dalam kemasan karton, siap untuk ekspor dan
+                didukung proses logistik yang efisien.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Apakah tersedia sampel untuk uji coba?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya, sampel produk bisa dikirimkan untuk kebutuhan pengujian.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title" style="color: white;">Hubungi Kami</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>info@dtyindorama.com</p>
+                <p>dtyindonesia@indorama.co.id</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Telepon</h3>
+                <p>+62 877 6903 1430</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Alamat</h3>
+                <p>
+                  Kembangkuning, Jatiluhur, Purwakarta, Jawa Barat, Indonesia
+                </p>
+                <p>
+                  Komplek Industri Bunderan, Kawasan Purwakarta, Jawa Barat,
+                  Indonesia
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Jam Operasional</h3>
+                <p>Senin - Jumat: 08.00 - 16.00</p>
+                <p>Sabtu, Minggu: Tutup</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Nama Lengkap" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Nomor Telepon" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Pesan" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>DTY Indorama</h3>
+            <p>
+              Mitra terbaik bagi industri tekstil yang membutuhkan benang
+              polyester berkualitas tinggi dengan jaminan proses modern,
+              konsistensi, serta layanan pelanggan yang profesional.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Produk</h3>
+            <ul>
+              <li><a href="#products">Draw Texturised Yarn</a></li>
+              <li><a href="#products">Benang POY</a></li>
+              <li><a href="#variants">Varian Produk</a></li>
+              <li><a href="#packaging">Pengemasan</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Perusahaan</h3>
+            <ul>
+              <li><a href="#advantages">Keunggulan</a></li>
+              <li><a href="#process">Proses Produksi</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Kontak</h3>
+            <ul>
+              <li>info@dtyindorama.com</li>
+              <li>+62 877 6903 1430</li>
+              <li>Purwakarta, Jawa Barat</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 DTY Indorama. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

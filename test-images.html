@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Images</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .image-test {
+        margin: 20px 0;
+        border: 2px solid #ddd;
+        padding: 10px;
+      }
+      .image-test img {
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Gambar DTY</h1>
+
+    <div class="image-test">
+      <h3>Image 1: image.png</h3>
+      <img
+        src="images/image.png"
+        alt="DTY Production"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image.png
+      </div>
+    </div>
+
+    <div class="image-test">
+      <h3>Image 2: image2.jpg</h3>
+      <img
+        src="images/image2.jpg"
+        alt="DTY Yarn Production"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image2.jpg
+      </div>
+    </div>
+
+    <div class="image-test">
+      <h3>Image 3: image3.jpg</h3>
+      <img
+        src="images/image3.jpg"
+        alt="DTY Packaging"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image3.jpg
+      </div>
+    </div>
+
+    <div class="image-test">
+      <h3>Image 4: image4.jpg</h3>
+      <img
+        src="images/image4.jpg"
+        alt="DTY Quality Control"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image4.jpg
+      </div>
+    </div>
+
+    <div class="image-test">
+      <h3>Image 5: image5.jpg</h3>
+      <img
+        src="images/image5.jpg"
+        alt="DTY Production Process"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image5.jpg
+      </div>
+    </div>
+
+    <div class="image-test">
+      <h3>Image 6: image6.jpg</h3>
+      <img
+        src="images/image6.jpg"
+        alt="DTY Machine"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image6.jpg
+      </div>
+    </div>
+
+    <div class="image-test">
+      <h3>Image 7: image7.jpg</h3>
+      <img
+        src="images/image7.jpg"
+        alt="DTY Quality Check"
+        onerror="this.nextElementSibling.style.display='block'"
+      />
+      <div class="error" style="display: none">
+        ❌ Gambar tidak dapat dimuat: images/image7.jpg
+      </div>
+    </div>
+  </body>
+</html>
