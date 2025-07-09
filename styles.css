@@ -19,11 +19,27 @@ body {
 
 /* Image Container and Loading States */
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+   display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+  background: #f3f3f3;
+  border-radius: 16px; /* opsional, untuk sudut membulat */
   overflow: hidden;
-  border-radius: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 0;
+}
+
+.image-container img {
+   display: block;
+  width: 100%;
+  height: auto; /* Tinggi otomatis sesuai rasio gambar */
+  border-radius: 16px; /* sama dengan container agar rapi */
+  object-fit: contain; /* gambar tidak terpotong, tetap proporsional */
+  background: #f3f3f3;
+}
+
+.image-container img.loaded {
+  opacity: 1;
 }
 
 .image-placeholder {
@@ -37,6 +53,24 @@ body {
   animation: shimmer 1.5s infinite;
   border-radius: inherit;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.image-placeholder.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.image-placeholder::after {
+  content: "Memuat gambar...";
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: absolute;
 }
 
 .image-error {
@@ -53,6 +87,13 @@ body {
   color: #6c757d;
   border-radius: inherit;
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border: 2px dashed #dee2e6;
+}
+
+.image-error.show {
+  opacity: 1;
 }
 
 .image-error i {
@@ -65,6 +106,7 @@ body {
   font-size: 0.9rem;
   margin: 0;
   text-align: center;
+  padding: 0 10px;
 }
 
 @keyframes shimmer {
@@ -76,12 +118,34 @@ body {
   }
 }
 
-/* Image loading optimization */
+/* Prevent image flicker and ensure smooth transitions */
 img {
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
 }
+
+/* Ensure loaded images stay visible */
+.image-container img.loaded {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Hide images until they're properly loaded */
+.image-container img:not(.loaded) {
+  opacity: 0;
+}
+
+/* Smooth loading animation */
+.image-container img.loading {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Image loading optimization */
 
 /* Navigation */
 .navbar {
@@ -277,28 +341,6 @@ img {
   z-index: 2;
 }
 
-.floating-yarn {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(45deg, #fff, #e0e0e0);
-  border-radius: 50%;
-  position: relative;
-  animation: float 6s ease-in-out infinite;
-}
-
-.floating-yarn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
-  background: linear-gradient(45deg, #3498db, #2980b9);
-  border-radius: 50%;
-  animation: spin 10s linear infinite;
-}
-
 /* Hero Image Styling */
 .hero-img {
   width: 100%;
@@ -307,6 +349,9 @@ img {
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   animation: float 6s ease-in-out infinite;
+  /* Override generic image container styles */
+  position: relative; /* Change from absolute */
+  object-fit: contain; /* Ensure the whole image is visible */
 }
 
 @keyframes float {
@@ -1098,7 +1143,7 @@ img {
 
   /* Image containers responsive fixes */
   .image-container {
-    min-height: 200px;
+    min-height: 200px !important;
   }
 
   .image-placeholder {
@@ -1120,31 +1165,31 @@ img {
 
   /* Hero image responsive */
   .hero-image .image-container {
-    min-height: 250px;
+    min-height: 250px !important;
   }
 
   /* Product image responsive */
   .product-image .image-container {
-    min-height: 200px;
+    min-height: 200px !important;
   }
 
   /* Features image responsive */
   .features-image .image-container {
-    min-height: 200px;
+    min-height: 200px !important;
   }
 
   /* Process images responsive */
   .process-main-img {
-    min-height: 200px;
+    min-height: 200px !important;
   }
 
   .process-gallery .image-container {
-    min-height: 120px;
+    min-height: 120px !important;
   }
 
   /* Packaging image responsive */
   .packaging-image .image-container {
-    min-height: 200px;
+    min-height: 200px !important;
   }
 
   .process-timeline {
@@ -1202,6 +1247,73 @@ img {
     width: 150px;
     height: 150px;
   }
+
+  /* Image containers responsive updates */
+  .image-container {
+    min-height: 180px;
+  }
+
+  .hero-image .image-container {
+    min-height: 200px;
+  }
+
+  .product-image .image-container,
+  .features-image .image-container,
+  .packaging-image .image-container {
+    min-height: 180px;
+  }
+
+  .process-main-img {
+    min-height: 180px;
+  }
+
+  .process-gallery .image-container {
+    min-height: 100px;
+  }
+
+  .image-error i {
+    font-size: 1.3rem;
+  }
+
+  .image-error p {
+    font-size: 0.75rem;
+  }
+
+  .image-placeholder::after {
+    font-size: 0.75rem;
+  }
+}
+
+/* Ensure images don't disappear on load */
+.image-container {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.image-container.image-loading {
+  background-color: #e9ecef;
+}
+
+/* Retry button styling */
+.retry-btn {
+  margin-top: 10px !important;
+  padding: 8px 16px !important;
+  background: #3498db !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 0.8rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.retry-btn:hover {
+  background: #2980b9 !important;
+  transform: translateY(-1px) !important;
+}
+
+.retry-btn:active {
+  transform: translateY(0) !important;
 }
 
 /* Scroll animations */
@@ -1322,7 +1434,7 @@ html {
 
 .hero-img,
 .product-image img,
-.features-image img,
+features-image img,
 .process-main-img,
 .process-gallery img,
 .packaging-image img {
